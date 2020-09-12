@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="login.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <style>
         .box{
             width:70%;
@@ -70,24 +73,47 @@
                     </button>
                   </li>
                   &nbsp;
-              <li class="nav-item dropdown active bg-info">
-                <a class="nav-link dropdown-toggle" href="#"
-                id="navbardrop" data-toggle="dropdown">
-                Dropdown link
-            </a>
-            <div class="dropdown-menu ">
-                <a class="dropdown-item" href="#">link 1</a>
-                <a class="dropdown-item" href="#">link 2</a>
-                <a class="dropdown-item" href="#">link 3</a>
-            </div>
-    
-            </li>
+                  <li class="nav-item dropdown active bg-info">
+                    <a class="nav-link dropdown-toggle" href="#"
+                    id="navbardrop" data-toggle="dropdown">
+                    Signup,Contact
+                </a>
+                <div class="dropdown-menu">
+                    <a class="btn btn-outline-secondary waves-effect btn-block " role="button" href="signup.html"><span class="fa fa-sign-in"></span> Signup</a>
+                    <a class="btn btn-outline-success waves-effect btn-block" role="button" href="#">Contact</a>
+                    <a class="btn btn btn-outline-danger waves-effect btn-block" href="#">link 3</a>
+                </div>
+        
+                </li>
             </ul>
           </div>
         </div>
         </nav>
-    <br>
-    <br>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Professional Football League</h1>
+                    <div class="row">
+                        <div class="col-12 col-sm-10">
+                            <p><b>“Your talent determines what you can do. Your motivation determines how much you are willing to do. Your attitude determines how well you do it.”</b></p>
+    
+                        </div>
+    
+                    </div>
+                    
+                </div>
+                <div class="col-12 col-sm-3 align-self-center ">
+                    <img src="https://www.dlf.pt/png/big/4/41659_la-liga-png.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center ">
+                    <a  id="myreserve" class="btn btn-warning btn-block btn-lg" role="button" 
+                    href="index.html" onclick="confirm('login to continue')"><b>Book Tickets</b></a>
+                    <!-- Assignment-4  -->
+                </div>
+            </div>
+        </div>
+      </header>
     <h1 id="middle">Buy a genuine Lionel Messi signed shirt</h1>
     <br>
     <div class="box">
@@ -108,5 +134,47 @@
         <br>
         <button  class="btn btn-lg btn-info btn-block  text-uppercase font-weight-bold mb-2">BUY NOW</button>
 
-
     </div>
+    <footer>
+        <!-- <div class="container"> -->
+            <div class="row footer">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                  121, Clear Water Bay Road<br>
+                  Clear Water Bay, Madrid<br>
+                  Spain<br>
+                  <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                  <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                  <i class="fa fa-envelope fa-lg"></i> <a href="mailto:laliga@football.net">confusion@food.net</a>
+               </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:laliga@football.in"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row footer justify-content-center">             
+                <div class="col-auto" >
+                    <p>© Copyright 2018 Laliga Official website</p>
+                </div>
+           </div>
+        <!-- </div> -->
+    </footer>
+</body>
+</html>

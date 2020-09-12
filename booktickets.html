@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: auto auto auto; 
+            background-color: black; 
+            grid-column-gap: 20px; 
+            grid-row-gap: 20px; 
+            padding: 10px; 
+        } 
+  
+        .grid-item { 
+            background-color: lightcyan; 
+            border: 1px solid black; 
+            padding: 25px; 
+            font-size: 15px; 
+            text-align: center; 
+        } 
+
+        img{
+                width: 100%;
+                height: 90%;
+
+            }
+        .button{
+            background-color: #4CAF50;
+            border:none;
+            color:white;
+            padding:10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: 2px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img src="https://www.dlf.pt/png/big/4/41659_la-liga-png.png" alt="logo" style="width:80px;">
+          <!-- <h1>AIG</h1> -->
+       </a>
+       
+       
+      
+        <a class="navbar-brand" href="index.html" style="color:lightskyblue"><b>HOME</b></a>
+        <a class="navbar-brand" href="fixtures.html" style="color:blue"><b>Statistics</b></a>
+        <a class="navbar-brand" href="news.html" style="color:blue"><b>Latest News and leader board</b></a>
+        <a class="navbar-brand" href="store.html" style="color:blue"><b>Store,Buy jersy and more</b></a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#mymodal">
+              FEEDBACK FORM
+            </button>
+          </li>
+          &nbsp;
+          <li class="nav-item dropdown active bg-info">
+            <a class="nav-link dropdown-toggle" href="#"
+            id="navbardrop" data-toggle="dropdown">
+            Signup,Contact
+        </a>
+        <div class="dropdown-menu">
+            <a class="btn btn-outline-secondary waves-effect btn-block " role="button" href="#"><span class="fa fa-sign-in"></span> Signup</a>
+            <a class="btn btn-outline-success waves-effect btn-block" role="button" href="#">Contact</a>
+            <a class="btn btn btn-outline-danger waves-effect btn-block" href="#">link 3</a>
+        </div>
+
+        </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+    <div class="modal fade" id="mymodal" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title">
+                      WELCOME
+                  </h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;
+                  </button>
+              </div>
+              <div class="modal-body">
+                <textarea rows = "5" cols = "50" name = "description" STYLE="background-color: #F5B041">
+                  start writing .....
+               </textarea>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="close" data-dismiss="modal">
+                      Have a nice day..
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+        <header class="jumbotron">
+          <div class="container">
+              <div class="row row-header">
+                  <div class="col-12 col-sm-6">
+                      <h1>Professional Football League</h1>
+                      <div class="row">
+                          <div class="col-12 col-sm-10">
+                              <p><b>“Your talent determines what you can do. Your motivation determines how much you are willing to do. Your attitude determines how well you do it.”</b></p>
+      
+                          </div>
+      
+                      </div>
+                      
+                  </div>
+                  <div class="col-12 col-sm-3 align-self-center ">
+                      <img src="https://www.dlf.pt/png/big/4/41659_la-liga-png.png" class="img-fluid">
+                  </div>
+                  <div class="col-12 col-sm-3 align-self-center ">
+                      <a  id="myreserve" class="btn btn-warning btn-block btn-lg" role="button" 
+                      href="index.html" onclick="alert('Redirecting to homepage')" ><b>Back To Home</b></a>
+                    
+                  </div>
+              </div>
+          </div>
+        </header>
+
+        <!-- Book Tickets Modal -->
+        <div id="ReserveModal" class="modal fade" role="dialog"><!--   MODAL displayed on top of page -->
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><b>Reserve Seats</b></h4>
+                        <button type="button" class="close" id="modalclosereserve">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+    
+    
+                            <div class="form-group row">
+                                <label class="col-sm-2 class-form-label "><b>Number of Tickets</b></label>
+                                <div class=col-sm-10 >
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label font-weight-bold" for="defaultInline1">1</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label font-weight-bold" for="defaultInline2">2</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label font-weight-bold" for="defaultInline3">3</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label font-weight-bold" for="defaultInline4">4</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label font-weight-bold" for="defaultInline5">5</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label font-weight-bold" for="defaultInline6">6</label>
+                                </div>
+                                </div>
+    
+                            </div>
+                            <div class="form-group row">
+                                <label style="font-size:20px" class="col-sm-2 class-form-label"><Strong>Section</Strong></label>
+                                    <div class="col-sm-10">
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons" id="section">
+                                            <label  class="btn btn-success form-check-label active">
+                                                <input class="form-check-input" type="radio" name="options" id="option1" autocomplete="off" checked>
+                                                Messi-End 
+                                            </label>
+                                            <label class="btn btn-danger form-check-label">
+                                                <input class="form-check-input" type="radio" name="options" id="option2" autocomplete="off">Maradona-End
+                                              </label>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+    
+    
+    
+                            <div class="form-group row">
+                                <label for="Date and Time" class="col-12 col-sm-2 col-form-label font-weight-bold">Date and Time</label>
+                                <div class="col-5 col-sm-4">
+                                    <input type="text" class="form-control" id="Date and Time" name="Date" placeholder="Date">
+                                </div>
+                                <div class="col-7 col-sm-6">
+                                    <input type="text" class="form-control" id="Date and Time" name="Time" placeholder="Time">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-sm-2 col-sm-10">             <!-- Assignment-4 -->
+                                    <button type="button" class="btn btn-secondary" id="reservecancel">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Resereve</button>
+                                </div>
+                            </div>
+    
+    
+    
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <div class = "grid-container">
+            <div class="grid-item"><img src = "images/img1.jpg"> <a  class="myreserve btn btn-outline-success btn-block btn-lg" 
+                role="button" href="#"><b>Book Now</b></a></div>
+            <div class="grid-item"><img src = "images/img2.jpg"><a  class="myreserve btn btn-outline-success btn-block btn-lg" 
+                role="button" href="#"><b>Book Now</b></a></div>
+            <div class="grid-item"><img src = "images/img3.jpg"><a  class="myreserve btn btn-outline-success btn-block btn-lg" 
+                role="button" href="#"><b>Book Now</b></a></div>
+            <div class="grid-item"><img src = "images/img4.jpg"><a  class="myreserve btn btn-outline-success btn-block btn-lg" 
+                role="button" href="#"><b>Book Now</b></a></div>
+            <div class="grid-item"><img src = "images/img5.jpg"><a  class="myreserve btn btn-outline-success btn-block btn-lg" 
+                role="button" href="#"><b>Book Now</b></a></div>
+            <div class="grid-item"><img src = "images/img6.jpg"><a  class="myreserve btn btn-outline-success btn-block btn-lg" 
+                role="button" href="#"><b>Book Now</b></a></div>
+        </div>
+        
+  
+        <footer>
+          <!-- <div class="container"> -->
+              <div class="row footer">             
+                  <div class="col-4 offset-1 col-sm-2">
+                      <h5>Links</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="./aboutus.html">About</a></li>
+                          <li><a href="#">Menu</a></li>
+                          <li><a href="#">Contact</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-7 col-sm-5">
+                      <h5>Our Address</h5>
+                      <address>
+                    121, Clear Water Bay Road<br>
+                    Clear Water Bay, Madrid<br>
+                    Spain<br>
+                    <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                    <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                    <i class="fa fa-envelope fa-lg"></i> <a href="mailto:laliga@football.net">confusion@food.net</a>
+                 </address>
+                  </div>
+                  <div class="col-12 col-sm-4 align-self-center">
+                      <div class="text-center">
+                          <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                          <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                          <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                          <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                          <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                          <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                      </div>
+                  </div>
+             </div>
+             <div class="row footer justify-content-center">             
+                  <div class="col-auto" >
+                      <p>© Copyright 2018 laliga Official website</p>
+                  </div>
+             </div>
+          <!-- </div> -->
+      </footer>
+
+      <script>
+
+            $(".myreserve").click(function(){
+                $('#ReserveModal').modal('toggle')
+
+                $('#ReserveModal').modal('show');
+
+                $("#modalclosereserve").click(function(){
+                    $('#ReserveModal').modal('hide');                 
+                });
+                $("#reservecancel").click(function(){
+                    $('#ReserveModal').modal('hide');                 
+                });
+            });
+      </script>
+        
+
+
+        
+        
+
+
+
+
+
+        
+
+
+
+
+    
+</body>
+</html>
